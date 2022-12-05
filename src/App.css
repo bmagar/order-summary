@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: hsl(225, 100%, 94%);
+    position: relative;
+}
+.hero-section{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    text-align: center;
+    border-radius: 20px 20px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); 
+    position: absolute; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-image{
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;  
+    object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/* Hero Info */
+
+.hero-info{
+    padding: 20px 40px;
+}
+
+/* h1 */
+h1{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.hero-info p{
+    margin-top: 20px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: lightgray;
+}
+
+
+/*  */
+
+.annual-plan{
+    background-color:hsl(225, 100%, 98%);
+    border-radius: 12px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.plan-box-left{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.plan-box-left div{
+    margin-left: 20px;
+}
+
+.plan-box-left div h5{
+    font-size: 15px;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.plan-box-left div p{
+    font-size: 15px;
+    font-weight: 900;
+    color: #8a8a8a;
+}
+
+.plan-box-left a{
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    transition: color .3s ease;
+}
+
+.annual-plan a:hover{
+    text-decoration: none;
+    color: hsl(245, 75%, 52%);
+    transition: color .3s ease;
+}
+
+
+
+/* primary-button */
+.proceed-btn{
+    display: block;
+    width: 100%;
+    background-color: hsl(228, 75%, 52%);
+    padding: 20px 0;
+    margin: 30px 0;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    text-decoration: none;
+    transition: background-color 3s ease;
+}
+
+.proceed-btn:hover{
+    background-color: hsl(224, 23%, 55%);
+}
+
+.cancel-btn{
+    display: block;
+    text-decoration: none;
+    border: none;
+    background: none;
+    margin-top: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Media query */
+@media only screen and (max-width: 425px) {
+    body{
+        font-size: 14px;
+    }
+  .hero-section {
+    max-width: 85%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .title{
+    font-size: 22px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .annual-plan{
+    padding: 6px;
   }
+
+  
+
+
+  
 }
